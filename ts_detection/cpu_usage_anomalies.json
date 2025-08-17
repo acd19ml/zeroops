@@ -1,0 +1,120 @@
+{
+  "total_anomalies": 10,
+  "anomalies": [
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:28:04+00:00",
+      "endTime": "2025-08-14T13:28:04+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏低)",
+      "original_value": 23.94196689,
+      "residual": -5.424232349919922,
+      "threshold": -5.400733596966246,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:30:04+00:00",
+      "endTime": "2025-08-14T13:30:04+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏高)",
+      "original_value": 30.81197553,
+      "residual": 8.05616328928345,
+      "threshold": 8.029727982260317,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:30:07+00:00",
+      "endTime": "2025-08-14T13:30:07+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏高)",
+      "original_value": 31.84098144,
+      "residual": 9.061974693713335,
+      "threshold": 8.029727982260317,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:30:10+00:00",
+      "endTime": "2025-08-14T13:30:10+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏高)",
+      "original_value": 32.56128558,
+      "residual": 9.7647286531929,
+      "threshold": 8.029727982260317,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:30:13+00:00",
+      "endTime": "2025-08-14T13:30:13+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏高)",
+      "original_value": 33.06549848,
+      "residual": 10.25536766519874,
+      "threshold": 8.029727982260317,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:38:07+00:00",
+      "endTime": "2025-08-14T13:38:07+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏低)",
+      "original_value": 25.90614933,
+      "residual": -5.627016949837387,
+      "threshold": -5.400733596966246,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:38:10+00:00",
+      "endTime": "2025-08-14T13:38:10+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏低)",
+      "original_value": 25.8569031,
+      "residual": -6.68794986321447,
+      "threshold": -5.400733596966246,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:38:13+00:00",
+      "endTime": "2025-08-14T13:38:13+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏低)",
+      "original_value": 25.82243074,
+      "residual": -7.42833490603341,
+      "threshold": -5.400733596966246,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:38:16+00:00",
+      "endTime": "2025-08-14T13:38:16+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏低)",
+      "original_value": 25.79830009,
+      "residual": -5.944385640854438,
+      "threshold": -5.400733596966246,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "storage_service_cpu_usage_percentage{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:44:46+00:00",
+      "endTime": "2025-08-14T13:44:46+00:00",
+      "异常描述": "(storage_service_cpu_usage_percentage,百分比,偏高)",
+      "original_value": 36.33784193,
+      "residual": 8.22339779243017,
+      "threshold": 8.029727982260317,
+      "anomaly_type": "偏高"
+    }
+  ],
+  "detection_params": {
+    "lower_percentile": 0.5,
+    "upper_percentile": 99.5,
+    "method": "STL分解 + 百分位数检测"
+  }
+}

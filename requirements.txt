@@ -14,6 +14,11 @@ rich>=14.1.0                      # Rich terminal formatting
 # Search functionality
 duckduckgo-search>=4.1.0          # DuckDuckGo search API
 
+# Data analysis and manipulation
+pandas>=2.2.0                     # Data manipulation and analysis
+statsmodels>=0.14.1               # Statistical models including STL decomposition
+scipy>=1.7.0                      # Scientific computing library
+
 # Note: Removed langchain dependencies as they were only used for Azure integration
 # If you need langchain functionality in the future, you can add:
 # langchain>=0.2.0                # LangChain framework

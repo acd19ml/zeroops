@@ -8,10 +8,10 @@ import json
 from contextlib import contextmanager
 import time
 
-from ..agents.agent import MultiStepAgent, register_template, ActionResult
-from ..agents.model import LLM
-from ..agents.utils import zwarn, rprint, have_images_in_messages
-from ..agents.tool import SimpleSearchTool
+from ..base.agent import MultiStepAgent, register_template, ActionResult
+from ..base.model import LLM
+from ..base.utils import zwarn, rprint, have_images_in_messages
+from ..base.tool import SimpleSearchTool
 from .utils import AnomalyDetectionAPI
 
 from .utils import PromEnv

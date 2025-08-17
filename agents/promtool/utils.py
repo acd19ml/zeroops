@@ -10,7 +10,7 @@ import time
 import requests
 import base64
 import json
-from ck_pro.agents.utils import KwargsInitializable, rprint, zwarn, zlog
+from ..base.utils import KwargsInitializable, rprint, zwarn, zlog
 import pandas as pd
 import numpy as np
 from statsmodels.tsa.seasonal import STL

@@ -1,0 +1,98 @@
+{
+  "total_anomalies": 8,
+  "anomalies": [
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:25:01+00:00",
+      "endTime": "2025-08-14T13:25:01+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏高)",
+      "original_value": 6402056.0,
+      "residual": 4675860.342502551,
+      "threshold": 4658611.565416715,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:35:31+00:00",
+      "endTime": "2025-08-14T13:35:31+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏高)",
+      "original_value": 6455520.0,
+      "residual": 4666429.520989098,
+      "threshold": 4658611.565416715,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:35:34+00:00",
+      "endTime": "2025-08-14T13:35:34+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏高)",
+      "original_value": 6559448.0,
+      "residual": 4703449.899654694,
+      "threshold": 4658611.565416715,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:35:37+00:00",
+      "endTime": "2025-08-14T13:35:37+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏高)",
+      "original_value": 6684952.0,
+      "residual": 4756217.593344325,
+      "threshold": 4658611.565416715,
+      "anomaly_type": "偏高"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:53:49+00:00",
+      "endTime": "2025-08-14T13:53:49+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏低)",
+      "original_value": 3843728.0,
+      "residual": -22710410.51801244,
+      "threshold": -20275161.429244835,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:53:52+00:00",
+      "endTime": "2025-08-14T13:53:52+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏低)",
+      "original_value": 4743616.0,
+      "residual": -21917526.548863307,
+      "threshold": -20275161.429244835,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:53:55+00:00",
+      "endTime": "2025-08-14T13:53:55+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏低)",
+      "original_value": 4829648.0,
+      "residual": -21916246.284631625,
+      "threshold": -20275161.429244835,
+      "anomaly_type": "偏低"
+    },
+    {
+      "label": "go_memstats_heap_alloc_bytes{host=\"localhost:1080\"}",
+      "host": "localhost:1080",
+      "startTime": "2025-08-14T13:53:58+00:00",
+      "endTime": "2025-08-14T13:53:58+00:00",
+      "异常描述": "(go_memstats_heap_alloc_bytes,单位,偏低)",
+      "original_value": 5729536.0,
+      "residual": -21059973.275703672,
+      "threshold": -20275161.429244835,
+      "anomaly_type": "偏低"
+    }
+  ],
+  "detection_params": {
+    "lower_percentile": 0.5,
+    "upper_percentile": 99.5,
+    "method": "STL分解 + 百分位数检测"
+  }
+}

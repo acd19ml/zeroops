@@ -143,8 +143,8 @@ EVALUATOR_LLM=gpt:nvidia/llama-3.3-nemotron-super-49b-v1.5
 ### 基础验证
 运行测试来验证环境变量是否正确加载：
 
-```bash
-python -m agents.model
+```bashs
+python -m agents.base.model
 ```
 
 如果看到 "✅ API key found: sk-xxxxx..." 说明设置成功。

@@ -9,8 +9,8 @@ from pathlib import Path
 # Add the parent directory to the path so we can import from ck_pro
 sys.path.append(str(Path(__file__).parent.parent.parent))
 
-from ck_pro.prom_tool.agent import Prom_ToolAgent
-from ck_pro.agents.session import AgentSession
+from ..promtool.agent import Prom_ToolAgent
+from ..base.session import AgentSession
 
 
 def run_complete_prometheus_workflow():
