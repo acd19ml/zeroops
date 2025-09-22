@@ -82,10 +82,12 @@ func (m *RedisObservationWindowManager) CheckObservation(ctx context.Context, se
 		return nil, fmt.Errorf("failed to unmarshal observation window: %w", err)
 	}
 
-	// Check if observation window has expired
+	// Check if observation window has expired (atomic operation)
 	if time.Now().After(window.EndTime) {
-		// Clean up expired window
-		m.redis.Del(ctx, key)
+		// Clean up expired window atomically
+		if err := m.redis.Del(ctx, key).Err(); err != nil {
+			return nil, fmt.Errorf("failed to clean up expired observation window: %w", err)
+		}
 		return nil, nil
 	}
 

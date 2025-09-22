@@ -21,7 +21,7 @@ func NewPgHealActionDAO(db *adb.Database) *PgHealActionDAO {
 
 // GetByType retrieves a heal action by fault domain type
 func (d *PgHealActionDAO) GetByType(ctx context.Context, faultType string) (*HealAction, error) {
-	const q = `SELECT id, desc, type, rules FROM heal_actions WHERE type = $1 LIMIT 1`
+	const q = `SELECT id, desc, type, rules FROM heal_actions WHERE type = $1`
 
 	row := d.DB.QueryRowContext(ctx, q, faultType)
 	var action HealAction

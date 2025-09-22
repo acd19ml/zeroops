@@ -169,11 +169,12 @@ func (c *Consumer) handleDrillDownAnalysis(ctx context.Context, m *healthcheck.A
 	// 2) 更新告警状态为恢复
 	if err := c.markRestoredInDB(ctx, m); err != nil {
 		log.Error().Err(err).Str("issue", m.ID).Msg("markRestoredInDB failed")
+		return // Stop processing on critical DB failure
 	}
-
 	// 3) 更新缓存状态
 	if err := c.markRestoredInCache(ctx, m); err != nil {
 		log.Error().Err(err).Str("issue", m.ID).Msg("markRestoredInCache failed")
+		// Cache failure is less critical, continue processing
 	}
 }
 
