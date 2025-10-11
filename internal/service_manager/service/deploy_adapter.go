@@ -111,16 +111,19 @@ func (a *DeployAdapter) determineInstanceCount(req *model.CreateDeploymentReques
 }
 
 // buildPackageURL 构建包下载URL
+// 规则：
+// 1. 固定从 /tmp/zeroops/packages 路径获取
+// 2. 服务名去掉 -service 后缀（如果有）
+// 3. 固定使用版本 v1.0.0
+// 4. 格式：/tmp/zeroops/packages/{处理后的服务名}-v1.0.0.tar.gz
 func (a *DeployAdapter) buildPackageURL(serviceName, version, customURL string) string {
-	// 如果提供了自定义URL，直接使用
-	if customURL != "" {
-		return customURL
-	}
+	// 处理服务名：去掉 -service 后缀
+	processedServiceName := strings.TrimSuffix(serviceName, "-service")
 
-	// 否则基于约定构建本地文件路径
-	// 格式：{baseURL}/{service}-{version}.tar.gz
-	return fmt.Sprintf("%s/%s-%s.tar.gz",
-		a.baseURL, serviceName, version)
+	// 固定路径和版本，构建包文件路径
+	// 格式：/tmp/zeroops/packages/{service}-v1.0.0.tar.gz
+	return fmt.Sprintf("%s/%s-v1.0.0.tar.gz",
+		a.baseURL, processedServiceName)
 }
 
 // ValidatePackageURL 验证包URL是否有效
